@@ -5,6 +5,7 @@ int main()
 int arr1[3][3];
 int arr2[3][3];
 int arr3[3][3]; // for product of two matrices
+int sum=0;
 printf("Enter the first matrices values---------\n");
 for(int i=0;i<3;i++){
     for(int j=0;j<3;j++){
@@ -21,9 +22,12 @@ for(int i=0;i<3;i++){
 }
 // logic of product of two matrices..
 for(int i=0;i<3;i++){
-    for(int j=0,k=0;j<3;j++){
-        arr3[i][j]=arr1[i][j] * arr2[k][i];
-        k++;
+    for(int j=0;j<3;j++){
+        for(int k=0;k<3;k++){
+            sum=sum+arr1[i][k] *arr2[k][j] ;
+        }
+        arr3[i][j]=sum;
+        sum=0;
 
     }
 }
