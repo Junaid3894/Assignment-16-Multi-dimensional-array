@@ -1,0 +1,38 @@
+/*1. Write a program to calculate the sum of two matrices each of order 3x3.*/
+
+#include<stdio.h>
+int main()
+{
+int arr1[3][3];
+int arr2[3][3];
+int arr3[3][3]; // for summation of two matrices
+printf("Enter the first matrices values---------\n");
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        printf("Enter the %d column value of %d row :",j+1,i+1);
+        scanf("%d",&arr1[i][j]);
+    }
+}
+printf("Enter the Second matrices values---------\n");
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        printf("Enter the %d column value of %d row :",j+1,i+1);
+        scanf("%d",&arr2[i][j]);
+    }
+}
+// logic of sum of two matrices..
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        arr3[i][j]=arr1[i][j] + arr2[i][j];
+
+    }
+}
+// finally print after summation of two matrices
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        printf("%d\t",arr3[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}
