@@ -1,0 +1,28 @@
+/*9. Write a program in C to accept a matrix and determine whether it is a sparse matrix.*/
+
+#include<stdio.h>
+int main()
+{
+int size;
+int count=0;
+printf("Enter the size of the array :");
+scanf("%d",&size);
+int arr[size][size];
+printf("Enter the matrices values---------\n");
+for(int i=0;i<size;i++){
+    for(int j=0;j<size;j++){
+        printf("Enter the %d column value of %d row :",j+1,i+1);
+        scanf("%d",&arr[i][j]);
+        if(arr[i][j]!=0){
+        count++;
+        }
+    }
+}
+if(count<=((size*size)/2)){
+    printf("It is sparse matrix ");
+}
+else{
+    printf("It is dense matrix");
+}
+return 0;
+}
